@@ -20,7 +20,8 @@ const App: FunctionComponent = () => {
   React.useEffect(() => {
     if (svgArea.current) {
       const draw = SVG().addTo(svgArea.current).size('400px', '400px');
-      draw.circle(100).fill('#FF0000');
+      draw.viewbox(0, 0, 1, 1)
+      draw.circle(0.5).fill('#FF0000');
     }
   }, [svgArea]);
   return (
